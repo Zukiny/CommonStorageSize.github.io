@@ -14,12 +14,15 @@
         </div>
         <div class="content">
             <button class="button" id="selectFileButton">Select File</button>
-            <div id="tableContainer" style="display: none;">
+            <input type="file" id="fileInput" accept=".csv" style="display: none;">
+            
+            <div id="tableContainer">
                 <table id="dataTable">
                     <thead></thead>
                     <tbody></tbody>
                 </table>
             </div>
+
             <div id="outputPanel">
                 <div id="outputLabel">Output will be displayed here.</div>
                 <div id="buttonPanel">
@@ -28,7 +31,6 @@
                 </div>
             </div>
         </div>
-        <input type="file" id="fileInput" accept=".csv" style="display: none;">
     </div>
     <script src="script.js"></script>
 </body>
