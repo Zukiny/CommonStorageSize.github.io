@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Common Storage Size</title>
+    <title>Common Storage Size Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <div id="titleBar">
-            <span id="title">Common Storage Size</span>
+    <div class="window">
+        <div class="title-bar">
+            <span class="title">Common Storage Size Calculator</span>
         </div>
-        <div id="contentPanel">
-            <button id="selectFileButton">Select File</button>
+        <div class="content">
+            <button class="button" id="selectFileButton">Select File</button>
             <div id="tableContainer" style="display: none;">
                 <table id="dataTable">
                     <thead></thead>
                     <tbody></tbody>
                 </table>
             </div>
-        </div>
-        <div id="outputPanel">
-            <div id="outputLabel">Output will be displayed here.</div>
-            <div id="buttonPanel">
-                <button id="commonSizeButton">Most Common Size</button>
-                <button id="topThreeButton">Top 3 Sizes</button>
+            <div id="outputPanel">
+                <div id="outputLabel">Output will be displayed here.</div>
+                <div id="buttonPanel">
+                    <button class="button" id="commonSizeButton">Most Common Size</button>
+                    <button class="button" id="topThreeButton">Top 3 Sizes</button>
+                </div>
             </div>
         </div>
+        <input type="file" id="fileInput" accept=".csv" style="display: none;">
     </div>
-    <input type="file" id="fileInput" accept=".csv" style="display: none;">
     <script src="script.js"></script>
 </body>
 </html>

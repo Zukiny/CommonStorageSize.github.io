@@ -1,42 +1,47 @@
 body {
-    margin: 0;
-    font-family: 'Tahoma', sans-serif;
     background-color: #C0C0C0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
 }
 
-#app {
+.window {
     width: 400px;
-    height: 400px;
+    border: 2px solid #000;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
     position: relative;
-    margin: auto;
-    border: 1px solid #000;
 }
 
-#titleBar {
+.title-bar {
     background-color: #000080;
     color: white;
     padding: 5px;
+    font-weight: bold;
 }
 
-#contentPanel {
-    background-color: white;
+.content {
     padding: 10px;
+}
+
+.button {
+    background-color: #d3d3d3;
     border: 1px solid #000;
-    margin: 10px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.button:hover {
+    background-color: #a9a9a9;
 }
 
 #outputPanel {
-    border: 1px solid #000;
-    margin: 10px;
-    padding: 10px;
+    margin-top: 10px;
 }
 
 #outputLabel {
     text-align: center;
     margin-bottom: 10px;
-}
-
-#buttonPanel {
-    display: flex;
-    justify-content: flex-end;
 }

@@ -51,40 +51,4 @@ function displayCSVContents(contents) {
 }
 
 document.getElementById('commonSizeButton').addEventListener('click', findMostCommonSize);
-document.getElementById('topThreeButton').addEventListener('click', listTopThreeSizes);
-
-function findMostCommonSize() {
-    const table = document.getElementById('dataTable');
-    if (table.rows.length <= 1) {
-        document.getElementById('outputLabel').innerText = "No data available.";
-        return;
-    }
-
-    const sizeCount = {};
-    for (let i = 1; i < table.rows.length; i++) {
-        const size = table.rows[i].cells[0].innerText; // Assuming storage sizes are in the first column
-        sizeCount[size] = (sizeCount[size] || 0) + 1;
-    }
-
-    const mostCommonSize = Object.keys(sizeCount).reduce((a, b) => sizeCount[a] > sizeCount[b] ? a : b);
-    document.getElementById('outputLabel').innerText = "Most Common Size: " + mostCommonSize;
-}
-
-function listTopThreeSizes() {
-    const table = document.getElementById('dataTable');
-    if (table.rows.length <= 1) {
-        document.getElementById('outputLabel').innerText = "No data available.";
-        return;
-    }
-
-    const sizeCount = {};
-    for (let i = 1; i < table.rows.length; i++) {
-        const size = table.rows[i].cells[0].innerText; // Assuming storage sizes are in the first column
-        sizeCount[size] = (sizeCount[size] || 0) + 1;
-    }
-
-    const sortedSizes = Object.entries(sizeCount).sort((a, b) => b[1] - a[1]);
-    const topSizes = sortedSizes.slice(0, 3).map(entry => `${entry[0]}: ${entry[1]}`).join('<br>');
-
-    document.getElementById('outputLabel').innerHTML = "Top 3 Sizes:<br>" + topSizes;
-}
+document.get
